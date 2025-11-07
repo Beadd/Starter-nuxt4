@@ -1,14 +1,12 @@
 import antfu from "@antfu/eslint-config";
-// import css from "@eslint/css";
-// import { tailwindSyntax } from "@eslint/css/syntax";
-import eslintPluginReadableTailwind from "eslint-plugin-readable-tailwind";
+import eslintPluginBetterTailwindcss from "eslint-plugin-better-tailwindcss";
 import eslintParserVue from "vue-eslint-parser";
 
 export default antfu(
   {
     stylistic: {
-      indent: 2, // 4, or 'tab'
-      quotes: "double", // or 'single'
+      indent: 2,
+      quotes: "double",
       semi: true,
     },
   },
@@ -17,46 +15,33 @@ export default antfu(
       "style/brace-style": ["error", "1tbs"],
     },
   },
-  // {
-  //   files: ["**/*.css"],
-  //   plugins: {
-  //     css,
-  //   },
-  //   language: "css/css",
-  //   languageOptions: {
-  //     customSyntax: tailwindSyntax,
-  //   },
-  //   rules: {
-  //     "css/no-empty-blocks": "error",
-  //   },
-  // },
   {
+    ignores: ["database.types.ts", "android", "ios", "public"],
+  },
+    {
     files: ["**/*.vue"],
     languageOptions: {
-      parser: eslintParserVue,
-    },
+      parser: eslintParserVue
+    }
   },
   {
     plugins: {
-      "readable-tailwind": eslintPluginReadableTailwind,
+      "better-tailwindcss": eslintPluginBetterTailwindcss
     },
     rules: {
-      // enable all recommended rules to warn
-      ...eslintPluginReadableTailwind.configs.warning.rules,
-      // enable all recommended rules to error
-      ...eslintPluginReadableTailwind.configs.error.rules,
+      // enable all recommended rules to report a warning
+      ...eslintPluginBetterTailwindcss.configs["recommended-warn"].rules,
+      // enable all recommended rules to report an error
+      ...eslintPluginBetterTailwindcss.configs["recommended-error"].rules,
 
       // or configure rules individually
-      "readable-tailwind/multiline": ["warn", { printWidth: 80 }],
+      "better-tailwindcss/enforce-consistent-line-wrapping": ["warn", { printWidth: 100 }]
     },
-  },
-  settings: {
+    settings: {
       "better-tailwindcss": {
         // tailwindcss 4: the path to the entry file of the css based tailwind config (eg: `src/global.css`)
         entryPoint: "app/assets/css/main.css",
       }
     }
-  {
-    ignores: ["database.types.ts", "android", "ios", "public"],
-  },
+  }
 );
