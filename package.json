@@ -17,6 +17,7 @@
     "supa": "supabase gen types typescript --project-id yourid > database.types.ts"
   },
   "dependencies": {
+    "@capacitor/core": "^7.4.4",
     "@tailwindcss/vite": "^4.1.16",
     "nuxt": "^4.2.0",
     "tailwindcss": "^4.1.16",
@@ -25,6 +26,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^6.2.0",
+    "@capacitor/cli": "^7.4.4",
     "@nuxt/eslint": "^1.10.0",
     "@nuxtjs/i18n": "^10.2.0",
     "@pinia/nuxt": "^0.11.3",
