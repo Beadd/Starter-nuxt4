@@ -17,7 +17,9 @@
     "supa": "supabase gen types typescript --project-id yourid > database.types.ts"
   },
   "dependencies": {
+    "@capacitor/android": "^7.4.4",
     "@capacitor/core": "^7.4.4",
+    "@capacitor/ios": "^7.4.4",
     "@tailwindcss/vite": "^4.1.16",
     "nuxt": "^4.2.0",
     "tailwindcss": "^4.1.16",
