@@ -19,4 +19,13 @@ export default defineNuxtConfig({
     "@primevue/nuxt-module",
     "@vueuse/nuxt",
   ],
+  i18n: {
+    defaultLocale: "zh",
+    strategy: "no_prefix",
+    locales: [
+      { code: "zh", name: "简体中文", file: "zh.json" },
+      { code: "en", name: "English", file: "en.json" },
+      { code: "ja", name: "日本語", file: "ja.json" },
+    ],
+  },
 });

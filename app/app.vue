@@ -1,5 +1,6 @@
 <template>
   <button class="btn p-17">
-    Default
+    {{ $t('welcome') }}
+    {{ $i18n.locale }}
   </button>
 </template>
