@@ -29,4 +29,8 @@ export default defineNuxtConfig({
       { code: "ja", name: "日本語", file: "ja.json" },
     ],
   },
+  supabase: {
+    redirect: false,
+    types: "./database.types.ts",
+  },
 });
