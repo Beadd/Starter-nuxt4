@@ -1,2 +1,11 @@
 @import "tailwindcss";
 @plugin "daisyui";
+@plugin "daisyui/theme"
+@theme {
+  --breakpoint-x: 38rem;
+  --spacing-x: 38rem;
+  --spacing-st: 0rem;
+  --spacing-st2: calc(4rem + var(--spacing-st));
+  --spacing-sb: 0rem;
+  --spacing-bar: calc(4rem + var(--spacing-sb));
+}
