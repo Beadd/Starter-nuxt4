@@ -18,8 +18,11 @@
   },
   "dependencies": {
     "@capacitor/android": "^7.4.4",
+    "@capacitor/app": "^7.1.0",
+    "@capacitor/clipboard": "^7.0.2",
     "@capacitor/core": "^7.4.4",
     "@capacitor/ios": "^7.4.4",
+    "@capacitor/preferences": "^7.0.2",
     "@tailwindcss/vite": "^4.1.16",
     "date-fns": "^4.1.0",
     "nuxt": "^4.2.0",
