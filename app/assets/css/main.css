@@ -1,6 +1,6 @@
 @import "tailwindcss";
 @plugin "daisyui";
-@plugin "daisyui/theme"
+
 @theme {
   --breakpoint-x: 38rem;
   --spacing-x: 38rem;
