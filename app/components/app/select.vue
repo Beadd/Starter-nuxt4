@@ -9,12 +9,12 @@ const props = defineProps<{
   disabled?: boolean;
 }>();
 
-const model = defineModel<string | number | null>();
+const model = defineModel<string | number | null | undefined>();
 
 watch(
   () => props.options,
   (opts) => {
-    if ((!model.value || model.value === null) && opts.length > 0) {
+    if (model.value == null && opts.length > 0 && opts[0]) {
       model.value = opts[0].value;
     }
   },

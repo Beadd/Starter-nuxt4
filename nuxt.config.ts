@@ -33,4 +33,7 @@ export default defineNuxtConfig({
     redirect: false,
     types: "../../../../database.types.ts",
   },
+  eslint: {
+    checker: true,
+  },
 });
