@@ -27,6 +27,8 @@
   "Please enter the report content": "请输入举报内容",
   "Please log in first": "请先登录",
   "characters": "字符",
+  "Ban": "封禁",
+  "Confirm ban": "确认封禁",
   "Not found": "未找到",
   "This content has been deleted or banned": "此内容已被删除或封禁"
 }
