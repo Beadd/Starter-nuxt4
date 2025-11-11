@@ -91,6 +91,5 @@ function click() {
     <PostBan v-if="!post.banned_at" :id="post.id" />
     <PostUnban v-else :id="post.id" />
   </div>
-  <PostBook :post="post" />
   <PostSub v-for="sub in post.subs" :key="sub.id" :sub="sub" />
 </template>

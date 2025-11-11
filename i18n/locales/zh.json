@@ -29,6 +29,11 @@
   "characters": "字符",
   "Ban": "封禁",
   "Confirm ban": "确认封禁",
+  "Banned": "已被封禁",
+  "Comment content": "评论内容",
+  "Share": "分享",
+  "Unban": "解封",
+  "Confirm unban": "确认解封",
   "Not found": "未找到",
   "This content has been deleted or banned": "此内容已被删除或封禁"
 }
