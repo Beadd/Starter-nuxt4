@@ -18,9 +18,7 @@ const icon = computed(() => [hovered.value ? "bg-info/30" : "opacity-70"]);
     "
   >
     <i
-      class="
-        bx bx-comment rounded-full p-3 transition-all duration-200 ease-linear
-      "
+      class="bx bx-comment rounded-full p-3 transition-all duration-200 ease-linear"
       :class="icon"
     />
     <span class="text-sm opacity-70">{{ count || 0 }}</span>

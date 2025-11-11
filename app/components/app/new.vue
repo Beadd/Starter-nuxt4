@@ -11,8 +11,8 @@ const router = useRouter();
 <template>
   <div
     class="
-      flex h-12 w-full cursor-pointer items-center justify-center
-      overflow-hidden rounded-xl border-2 text-center
+      flex h-12 w-full cursor-pointer items-center justify-center overflow-hidden rounded-xl
+      border-2 text-center
     "
     :class="
       warning

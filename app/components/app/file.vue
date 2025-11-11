@@ -46,8 +46,8 @@ function formatsize(size: number) {
 <template>
   <div
     class="
-      flex w-full cursor-pointer flex-col items-center justify-center
-      overflow-hidden rounded-xl border-2 p-2 text-center
+      flex w-full cursor-pointer flex-col items-center justify-center overflow-hidden rounded-xl
+      border-2 p-2 text-center
     "
     :class="
       props.warning
