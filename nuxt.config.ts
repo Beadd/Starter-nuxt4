@@ -19,6 +19,7 @@ export default defineNuxtConfig({
     "@primevue/nuxt-module",
     "@vueuse/nuxt",
     "@nuxtjs/supabase",
+    "nuxt-swiper",
   ],
   i18n: {
     defaultLocale: "zh",
