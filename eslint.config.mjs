@@ -29,12 +29,6 @@ export default antfu(
       "better-tailwindcss": eslintPluginBetterTailwindcss,
     },
     rules: {
-      // enable all recommended rules to report a warning
-      ...eslintPluginBetterTailwindcss.configs["recommended-warn"].rules,
-      // enable all recommended rules to report an error
-      ...eslintPluginBetterTailwindcss.configs["recommended-error"].rules,
-
-      // or configure rules individually
       "better-tailwindcss/enforce-consistent-line-wrapping": [
         "warn",
         { printWidth: 100 },
@@ -42,7 +36,6 @@ export default antfu(
     },
     settings: {
       "better-tailwindcss": {
-        // tailwindcss 4: the path to the entry file of the css based tailwind config (eg: `src/global.css`)
         entryPoint: "app/assets/css/main.css",
       },
     },

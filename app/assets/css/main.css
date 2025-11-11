@@ -1,4 +1,4 @@
-@import "boxicons/css/boxicons.min.css";
+@import "../../../node_modules/boxicons/css/boxicons.min.css";
 
 @import "tailwindcss";
 @plugin "daisyui";
