@@ -51,6 +51,9 @@ export default antfu(
           extensions: [".js", ".vue", ".ts"],
         },
       ],
+      "@intlify/vue-i18n/no-raw-text": ["error", {
+        ignoreText: ["@", "#", "$", "."],
+      }],
     },
     settings: {
       "vue-i18n": {

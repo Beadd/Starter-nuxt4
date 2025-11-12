@@ -42,7 +42,7 @@ watch(
     </div>
     <form method="dialog" class="modal-backdrop">
       <button class="outline-none">
-        close
+        {{ $t('close') }}
       </button>
     </form>
   </dialog>

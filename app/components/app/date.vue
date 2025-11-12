@@ -24,6 +24,6 @@ const parsed = computed(() => {
     </span>
   </div>
   <div v-else class="text-sm italic opacity-50">
-    Invalid date
+    {{ $t('Invalid date') }}
   </div>
 </template>
