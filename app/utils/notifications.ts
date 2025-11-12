@@ -10,7 +10,7 @@ export function getnotifications(
     string,
     { title?: string; content?: string; severity?: string }
   > = {
-    welcome: { title: t("Welcome"), content: t("You're all set!") },
+    welcome: { title: t("Welcome"), content: t("You are all set!") },
     like: { content: t("New like") },
     post: { content: t("New comment") },
     follow: { title: t("Email user"), content: t("New follower") },

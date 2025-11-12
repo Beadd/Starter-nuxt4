@@ -31,7 +31,7 @@ async function copy() {
       </div>
       <span class="text-sm opacity-50">
         {{
-          $t("Automatically copied. If it didn't work, please copy manually")
+          $t("Automatically copied. If it did not work, please copy manually")
         }}
       </span>
     </div>
