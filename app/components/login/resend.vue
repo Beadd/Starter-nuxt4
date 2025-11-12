@@ -37,7 +37,7 @@ async function resend() {
     </span>
   </div>
   <div v-else class="text-secondary underline" @click="bus++">
-    {{ $t("Do get the code?") }}
+    {{ $t("Do not get the code?") }}
   </div>
   <AppDialog
     :confirm="resend"
