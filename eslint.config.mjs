@@ -52,7 +52,7 @@ export default antfu(
         },
       ],
       "@intlify/vue-i18n/no-raw-text": ["error", {
-        ignoreText: ["@", "#", "$", ".", 'v'],
+        ignoreText: ["@", "#", "$", "...", "v"],
       }],
     },
     settings: {

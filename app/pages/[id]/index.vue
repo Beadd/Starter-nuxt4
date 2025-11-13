@@ -32,7 +32,7 @@ const { data: firendsnum } = await supabase.rpc("get_friends_number", {
   user_id: id,
 });
 
-const [postcount, bookcount, pointcount, starcount] = await Promise.all([
+const [postcount, likecount] = await Promise.all([
   supabase
     .from("posts")
     .select("id", { count: "exact", head: true })
@@ -41,27 +41,15 @@ const [postcount, bookcount, pointcount, starcount] = await Promise.all([
     .is("deleted_at", null)
     .is("is_report", null),
   supabase
-    .from("books")
-    .select("id", { count: "exact", head: true })
-    .eq("user_id", id)
-    .is("deleted_at", null),
-  supabase
-    .from("points")
-    .select("id", { count: "exact", head: true })
-    .eq("user_id", id)
-    .is("deleted_at", null),
-  supabase
     .from("likes")
     .select("id", { count: "exact", head: true })
     .eq("user_id", id)
-    .not("book_id", "is", null),
+    .not("post_id", "is", null),
 ]);
 
 const tabs = computed(() => [
   `${t("Posts")} (${postcount.count})`,
-  `${t("Books")} (${bookcount.count})`,
-  `${t("Points")} (${pointcount.count})`,
-  `${t("Stars")} (${starcount.count})`,
+  `${t("Likes")} (${likecount.count})`,
 ]);
 </script>
 
@@ -126,13 +114,7 @@ const tabs = computed(() => [
           <ProfilePosts :id="id" />
         </swiper-slide>
         <swiper-slide>
-          <ProfileBooks :id="id" />
-        </swiper-slide>
-        <swiper-slide>
-          <ProfilePoints :id="id" />
-        </swiper-slide>
-        <swiper-slide>
-          <ProfileStars :id="id" />
+          <ProfilePosts :id="id" />
         </swiper-slide>
       </AppSwiper>
     </AppFrame>
