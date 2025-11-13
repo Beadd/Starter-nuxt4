@@ -7,7 +7,7 @@ const last = ref<string | null>(null);
 const more = ref(true);
 const profiles = ref<
   ((typeprofile | null | undefined) & { isfollow: boolean })[]
-    >([]);
+>([]);
 
 async function load() {
   let query = supabase
