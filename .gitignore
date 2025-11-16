@@ -26,3 +26,5 @@ logs
 .vercel
 
 android/app/release
+
+supabase/.temp
